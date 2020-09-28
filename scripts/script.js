@@ -42,3 +42,33 @@ function mcancelclosetime()
 
 // close layer when click-out
 document.onclick = mclose; 
+
+var i = 0;
+var canvas = document.getElementById("myCanvas");
+var radius = 200;
+var ctx = canvas.getContext("2d");
+
+function drawCircle() {
+
+	ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+
+
+	var i = 0;
+	var x = radius+radius*Math.cos(i);
+	var y = radius+radius*Math.sin(i);
+
+	ctx.beginPath();
+	ctx.moveTo(x,y);
+
+	for (var i=0;i<=2*Math.PI;i+=0.1) {
+		x = Math.floor(radius+radius*Math.cos(i));
+		y = Math.floor(radius+radius*Math.sin(i));
+		ctx.lineTo(x,y);
+		ctx.stroke();
+	}
+}
+
+function stopCircle() {
+
+}
