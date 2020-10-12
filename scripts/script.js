@@ -45,14 +45,12 @@ document.onclick = mclose;
 
 var i = 0;
 var canvas = document.getElementById("myCanvas");
-var radius = 200;
+var radius = canvas.width/2;
 var ctx = canvas.getContext("2d");
 
 function drawCircle() {
 
-	ctx.clearRect(0, 0, canvas.width, canvas.height)
-
-
+	ctx.clear();
 
 	var i = 0;
 	var x = radius+radius*Math.cos(i);
@@ -68,6 +66,20 @@ function drawCircle() {
 		ctx.stroke();
 	}
 }
+
+CanvasRenderingContext2D.prototype.clear = 
+  CanvasRenderingContext2D.prototype.clear || function (preserveTransform) {
+    if (preserveTransform) {
+      this.save();
+      this.setTransform(1, 0, 0, 1, 0, 0);
+    }
+
+    this.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+    if (preserveTransform) {
+      this.restore();
+    }           
+};
 
 function stopCircle() {
 
