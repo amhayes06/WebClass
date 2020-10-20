@@ -5,6 +5,7 @@
 		<title> Andrew Hayes - COP4813 </title>
 		<link rel="stylesheet" href="css/site.css">
 		<script src="scripts/script.js"></script>
+		<script src="scripts/assignment3.js"></script>
 	</head>
 
 	<body>
@@ -47,6 +48,61 @@
 		</ul>
 		<div style="clear:both"></div>
 		
+		<br><br>
+		<div>
+			<form action="mailto:andrew_hayes1846@daytonastate.edu" id="myForm" onsubmit="return allIsWell();" method="POST" enctype="text/plain">
+				<div>
+					<label for="name">Enter name (JS):</label><br>
+					<input type="text" name="name" id="name" placeholder="Name">
+				</div>
+
+				<div>
+					<label for="street">Enter street name and number (JS):</label><br>
+					<input type="text" name="street" id="street" placeholder="Street Number">
+				</div>
+
+				<div>
+					<label for="city">Enter city (JS):</label><br>
+					<input type="text" name="city" id="city" placeholder="City">
+				</div>
+
+				<div>
+					<label for="state">Enter state (JS):</label><br>
+					<input type="text" name="state" id="state" placeholder="State">
+				</div>
+
+				<div>
+					<label for="zip">Enter zip code (JS):</label><br>
+					<input maxlength="5" type="text" name="zip" id="zip" placeholder="Zip Code">
+				</div>
+
+				<div>
+					<label for="bday">Enter your birthday (JS):</label><br>
+					<input type="text" name="bday" id="bday" placeholder="Birthday">
+				</div>
+
+				<div>
+					<label for="email">Enter Email (HTML5):</label><br>
+					<input type="email" name="email" id="email" placeholder="Email Address">
+				</div>
+
+				<div>
+					<label for="phone">Enter phone number (JS):</label><br>
+					<input maxlength="14" type="text" name="phone" id="phone" placeholder="(xxx) xxx-xxxx">
+				</div>
+
+				<div>
+					<label for="test">NO ROBOTS! What is two plus two?:</label><br>
+					<input type="text" name="test" id="test">
+				</div>
+
+				<div>
+					<input type="submit" name="submit" id="submit" value="submit">
+				</div>
+			</form>
+		</div>
+
+
 		<div>Created by Andrew Hayes</div>
 	</body>
 </html>
