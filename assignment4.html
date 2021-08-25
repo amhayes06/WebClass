@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<title> Andrew Hayes - COP4813 </title>
+		<link rel="stylesheet" href="css/site.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="scripts/script.js"></script>
+		<script src="scripts/assignment4.js"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<script src="http://code.highcharts.com/modules/exporting.js"></script>
+		<script src="scripts/table.js"></script>
+	</head>
+
+	<body>
+		<ul id="sddm">
+			<li><a href="index.html" 
+				onmouseover="mopen('m1')" 
+				onmouseout="mclosetime()">Home</a>
+				<div id="m1" 
+					onmouseover="mcancelclosetime()" 
+					onmouseout="mclosetime()">
+				<a href="http://roneaglin.online/cop4813/">Web Systems</a>
+				<a href="#"></a>
+				<a href="#">JavaScript</a>
+				</div>
+			</li>
+			<li><a href="http://roneaglin.online/cop4813/home/assignments/" 
+				onmouseover="mopen('m2')" 
+				onmouseout="mclosetime()">Assignments</a>
+				<div id="m2" 
+					onmouseover="mcancelclosetime()" 
+					onmouseout="mclosetime()">
+					<a href="assignment1.html">Assignment 1</a>
+					<a href="assignment2.html">Assignment 2</a>
+					<a href="assignment3.html">Assignment 3</a>
+					<a href="assignment4.html"><b>Assignment 4</b></a>
+					<a href="assignment5.html">Assignment 5</a>
+					<a href="assignment6.html">Assignment 6</a>
+					<a href="assignment7.html">Assignment 7</a>
+					<a href="assignment8.html">Assignment 8</a>
+					<a href="assignment9.html">Assignment 9</a>
+					<a href="assignment10.html">Assignment 10</a>
+					<a href="assignment11.html">Assignment 11</a>
+					<a href="assignment12.html">Assignment 12</a>
+					<a href="assignment13.html">Assignment 13</a>
+					<a href="assignment14.html">Assignment 14</a>
+					<a href="assignment15.html">Assignment 15</a>
+				</div>
+			</li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+		<div style="clear:both"></div>
+
+		<div align="center">
+			Equation Plotting Calculator
+			<br>
+			y = ax<sup>2</sup> + bx + c<br>
+			Input a <input type="text" id="a" size="5" value="1">
+			<br>
+			Input b <input type="text" id="b" size="5" value="1">
+			<br>
+			Input c <input type="text" id="c" size="5" value="1">
+			<br>
+			X Min<input type="text" id="xmin" value="-10" size="5">
+			X Max<input type="text" id="xmax" value="10" size="5">
+			<br><br>
+
+			<input type="button" value="Calculate" id="calculate">
+			<input type="button" value="Plot" id="plot">
+		</div>
+
+		<div id="output"></div>
+
+		<div align="center" id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+
+
+
+		<div>Created by Andrew Hayes</div>
+	</body>
+</html>
+
+		
