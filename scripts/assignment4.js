@@ -41,7 +41,7 @@ $(window).load(function(){
       s += c + "<br>";
 
       for (var i = 0; i <= n; i++) {
-        s += " Y =   " + y[i] + "    @     X = " + x[i] + "<br/>";
+        s += " Y = S" + y[i] + " @ X = " + x[i] + "<br/>";
       }
 
       output.innerHTML = s;
