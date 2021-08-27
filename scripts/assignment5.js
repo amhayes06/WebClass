@@ -23,13 +23,13 @@ function doDrawing() {
 		if (timesRun === maxRun) {
 			clearInterval(interval);
 		}
-		drawCircle();
+		drawSpiro();
 
 		},
 	);
 }
 
-function drawCircle() {
+function drawSpiro() {
   t += tInc;
   var x = Math.floor(posX + (R + r) * Math.cos(t) + (r + O) * Math.cos(((R - r) / r) * t));
   var y = Math.floor(posY + (R + r) * Math.sin(t) - (r+ O) * Math.sin(((R - r) / r) * t));
