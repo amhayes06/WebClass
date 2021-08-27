@@ -1,90 +1,51 @@
-// Copyright 2006-2007 javascript-array.com
+var tInc = 7.5;
+var t = 0;
+var maxRun = 500;
+var c = document.getElementById("myCanvas");
+var posX = (c.width / 2);
+var posY = (c.height / 2);
+var ctx = c.getContext("2d");
+var R = c.width *.2;
+var r = R * Math.floor(Math.random() * 10) /10;
+var O = r * 0.5;
+var timesRun;
 
-var timeout	= 500;
-var closetimer	= 0;
-var ddmenuitem	= 0;
+function doDrawing() {
+	var r = R * Math.floor(Math.random() * 10) /10;
+	timesRun = 0;
+	ctx.clear();
+	ctx.beginPath();
+	ctx.strokeStyle = '#' + Math.floor(Math.random() * 16777215).toString(16);
+	ctx.moveTo(posX, posY);
+	var interval = setInterval(function() {
+		timesRun += 1;
+		if (timesRun === maxRun) {
+			clearInterval(interval);
+		}
+		drawCircle();
 
-// open hidden layer
-function mopen(id)
-{	
-	// cancel close timer
-	mcancelclosetime();
-
-	// close old layer
-	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
-
-	// get new layer and show it
-	ddmenuitem = document.getElementById(id);
-	ddmenuitem.style.visibility = 'visible';
-
+		},
+	);
 }
-// close showed layer
-function mclose()
-{
-	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
-}
-
-// go close timer
-function mclosetime()
-{
-	closetimer = window.setTimeout(mclose, timeout);
-}
-
-// cancel close timer
-function mcancelclosetime()
-{
-	if(closetimer)
-	{
-		window.clearTimeout(closetimer);
-		closetimer = null;
-	}
-}
-
-// close layer when click-out
-document.onclick = mclose; 
-
-var i = 0;
-var canvas = document.getElementById("myCanvas");
-var radius = canvas.width/2;
-var ctx = canvas.getContext("2d");
 
 function drawCircle() {
-	alert('Drawing Circle!')
-	var canvas = document.getElementById("myCanvas");
-	var radius = canvas.width/2;
-	var ctx = canvas.getContext("2d");
-
-	ctx.clear();
-
-	var i = 0;
-	var x = radius+radius*Math.cos(i);
-	var y = radius+radius*Math.sin(i);
-
-	ctx.beginPath();
-	ctx.moveTo(x,y);
-
-	for (var i=0;i<=2*Math.PI;i+=0.1) {
-		x = Math.floor(radius+radius*Math.cos(i));
-		y = Math.floor(radius+radius*Math.sin(i));
-		ctx.lineTo(x,y);
-		ctx.stroke();
-	}
+  t += tInc;
+  var x = Math.floor(posX + (R + r) * Math.cos(t) + (r + O) * Math.cos(((R - r) / r) * t));
+  var y = Math.floor(posY + (R + r) * Math.sin(t) - (r+ O) * Math.sin(((R - r) / r) * t));
+  ctx.lineTo(x, y) * (c.width / 2);
+  ctx.stroke();
 }
 
 CanvasRenderingContext2D.prototype.clear = 
-  CanvasRenderingContext2D.prototype.clear || function (preserveTransform) {
-    if (preserveTransform) {
-      this.save();
-      this.setTransform(1, 0, 0, 1, 0, 0);
-    }
+	CanvasRenderingContext2D.prototype.clear || function (preserveTransform) {
+		if (preserveTransform) {
+			this.save();
+			this.setTransform(1, 0, 0, 1, 0, 0);
+		}
 
-    this.clearRect(0, 0, this.canvas.width, this.canvas.height);
+	this.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-    if (preserveTransform) {
-      this.restore();
-    }           
+	if (preserveTransform) {
+		this.restore();
+	}           
 };
-
-function stopCircle() {
-
-}
