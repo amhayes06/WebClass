@@ -11,7 +11,8 @@ var O = r * 0.5;
 var timesRun;
 
 function doDrawing() {
-	var r = R * Math.floor(Math.random() * 10) /10;
+	r = R * Math.floor(Math.random() * 10) /10;
+	O = r * 0.5;
 	timesRun = 0;
 	ctx.clear();
 	ctx.beginPath();
