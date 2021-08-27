@@ -35,10 +35,10 @@ $(window).load(function(){
     function displayValues() {
       var s = "";
 
-      s = "Y = ";
+      s = "<b>Y = ";
       s += a + " x<sup>2</sup> + ";
       s += b + " x + ";
-      s += c + "<br>";
+      s += c + "</b><br>";
 
       for (var i = 0; i <= n; i++) {
         s += " Y = " + y[i] + "  @ X = " + x[i] + "<br/>";
