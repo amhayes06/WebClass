@@ -49,6 +49,7 @@ var radius = canvas.width/2;
 var ctx = canvas.getContext("2d");
 
 function drawCircle() {
+	alert('Drawing Circle!')
 	var canvas = document.getElementById("myCanvas");
 	var radius = canvas.width/2;
 	var ctx = canvas.getContext("2d");
