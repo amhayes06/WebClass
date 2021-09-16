@@ -16,5 +16,5 @@ function populateTable(jsonObj) {
         text += "<tr><td>" + jsonObj[x].firstName + "</td></tr>"
     }
     text += "</table>"
-    document.getElementById("table").innerHTML = text;
+    document.getElementById("table").innerHTML = jsonObj;
 }
