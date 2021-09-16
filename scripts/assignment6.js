@@ -1,23 +1,20 @@
-var xmlhttp = new XMLHttpRequest();
-var url = "http://www.wafflecoder.net/static/assignment6.json";
+let requestURL = "./static/assignment6.json";
+let request = new XMLHttpRequest();
+const table = document.querySelector('header');
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
 
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
+request.onload = function() {
+    const dataText = request.response;
+    const data = JSON.parse(dataText);
+    populateTable(data);
+}
 
-function myFunction(arr) {
-    var out = "";
-    var i;
-        out += '<table border="1">';
-
-    for(i = 0; i < arr.length; i++) {
-        out += '<tr>';
-        out += '<td>' + arr[i].Name  + '</td>';
-        out += '<td><a href="' + arr[i].URL + '" target="_blank" >' + arr[i].URL + '</a></td>';
-        out += '<tr>';
-
+function populateTable(jsonObj) {
+    for (let x in jsonObj) {
+        text += "<tr><td>" + jsonObj[x].name + "</td></tr>"
     }
-
-        out += '</table>';
-
-    document.getElementById("output").innerHTML = out;
+    text += "</table>"
+    document.getElementById("table").innerHTML = text;
 }
