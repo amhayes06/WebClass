@@ -6,8 +6,7 @@ request.responseType = 'json';
 request.send();
 
 request.onload = function() {
-    const dataText = request.response;
-    const data = JSON.parse(dataText);
+    const data = request.response;
     populateTable(data);
 }
 
