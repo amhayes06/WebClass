@@ -17,4 +17,4 @@ function populateTable(jsonObj) {
 }
 
 request.open('GET', requestURL);
-request.send("x=" + dbPa);
+request.send("x=" + dbParam);
