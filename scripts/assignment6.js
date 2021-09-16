@@ -7,11 +7,11 @@ request.send();
 
 request.onload = function() {
     const data = request.response;
-    let text = "<table border='1'>"
     populateTable(data);
 }
 
 function populateTable(jsonObj) {
+    let text = "<table border='1'>"
     for (let x in jsonObj) {
         text += "<tr><td>" + jsonObj[x].name + "</td></tr>"
     }
