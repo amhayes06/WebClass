@@ -1,7 +1,6 @@
 let requestURL = "./static/assignment6.json";
 let request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.send();
+const dbParam = JSON.stringify({table:"Employees"})
 
 request.onload = function() {
     const data = JSON.parse(this.responseText);
@@ -16,3 +15,6 @@ function populateTable(jsonObj) {
     text += "</table>"
     document.getElementById("table").innerHTML = jsonObj[1].firstName;
 }
+
+request.open('GET', requestURL);
+request.send("x=" + dbPa);
