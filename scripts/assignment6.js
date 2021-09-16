@@ -13,7 +13,7 @@ function populateTable(jsonObj) {
         text += "<tr><td>" + jsonObj[x].firstName + "</td></tr>"
     }
     text += "</table>"
-    document.getElementById("table").innerHTML = jsonObj[1].firstName;
+    document.getElementById("table").innerHTML = text;
 }
 
 request.open('GET', requestURL);
