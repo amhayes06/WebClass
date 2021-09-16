@@ -7,6 +7,7 @@ request.send();
 
 request.onload = function() {
     const data = request.response;
+    let text = "<table border='1'>"
     populateTable(data);
 }
 
