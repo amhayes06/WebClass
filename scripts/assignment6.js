@@ -10,7 +10,7 @@ request.onload = function() {
 function populateTable(jsonObj) {
     let text = "<table><th>Phase</th><th>"
     for (let x in jsonObj) {
-        text += "<tr><td>" + jsonObj[x].firstName + "</td>"
+        text += "<tr><td>" + jsonObj[x].phase + "</td>"
         text += "<td><img src=\"" + jsonObj[x].image + "\"></td></tr>"
     }
     text += "</table>"
