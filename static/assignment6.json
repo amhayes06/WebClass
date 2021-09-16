@@ -1,5 +1,10 @@
 [
-  { "firstName":"John", "lastName":"Doe" },
-  { "firstName":"Anna", "lastName":"Smith" },
-  { "firstName":"Peter", "lastName":"Jones" }
+  { "phase":"New Moon", "image":"https://moon.nasa.gov/internal_resources/366" },
+  { "phase":"Waxing Crescent", "image":"https://moon.nasa.gov/internal_resources/368" },
+  { "phase":"First Quarter", "image":"https://moon.nasa.gov/internal_resources/367" },
+  { "phase":"Waxing Gibbous", "image":"https://moon.nasa.gov/internal_resources/365" },
+  { "phase":"Full Moon", "image":"https://moon.nasa.gov/internal_resources/364" },
+  { "phase":"Waning Gibbous", "image":"https://moon.nasa.gov/internal_resources/363" },
+  { "phase":"Last Quarter", "image":"https://moon.nasa.gov/internal_resources/362" },
+  { "phase":"Waning Crescent", "image":"https://moon.nasa.gov/internal_resources/361" }
 ]
