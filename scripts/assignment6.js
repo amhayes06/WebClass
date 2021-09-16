@@ -4,7 +4,7 @@ request.open('GET', requestURL);
 request.send();
 
 request.onload = function() {
-    const data = JSON.parse(request.response);
+    const data = JSON.parse(request.responseText);
     populateTable(data);
 }
 
