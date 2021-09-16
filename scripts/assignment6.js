@@ -1,12 +1,10 @@
 let requestURL = "./static/assignment6.json";
 let request = new XMLHttpRequest();
-const table = document.querySelector('header');
 request.open('GET', requestURL);
-request.responseType = 'json';
 request.send();
 
 request.onload = function() {
-    const data = request.response;
+    const data = JSON.parse(request.response);
     populateTable(data);
 }
 
