@@ -40,11 +40,16 @@ function dealCard() {
 
 }
 
-function removeCard() {
-    for ( j=c; j<=cardsLeft-2; j++) {
-        cardsDealt
-    }
+function removeCard(img) {
+    $(img).hide();
+}
 
+$(drop);
+
+function drop() {
+    $('.trash').droppable({
+        drop: handleDropEvent
+    });
 }
 
 function randomCard() {
@@ -68,13 +73,16 @@ function checkCard(cardNum) {
 function placeCard(cardNum) {
     var img = document.createElement("img");
     img.src = "static/cards/" +cards[cardNum] + ".png";
-    document.getElementById("test").appendChild(img);
-    $('img').draggable();
+    img.width = 103;
+    img.height = 150;
+    document.getElementById("cards").appendChild(img);
+    $(img).draggable();
     cardsDealt.push(cardNum);
     cardsLeft--;
+    $('.trash').droppable();
 }
 
 function handleDropEvent(event, ui) {
     var draggable = ui.draggable;
-    var droppable = $(this)
+    removeCard(draggable);
 }
