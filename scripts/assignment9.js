@@ -33,16 +33,27 @@ function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall();
     for(i=0; i<ballCount; i++){
+
         if(x[i] + dx[i] > canvas.width-r[i] || x[i] + dx[i] < r[i]) {
             dx[i] = -dx[i];
         }
-        if(y[i] + dy[i] > canvas.height-r[i] || y[i] + dy[i] < r[i]) {
-            dy[i] = -dy[i]; 
-            dy[i] *= 0.90;
-            dx[i] *= 0.90;
+        if (y[i] <= (canvas.height-r[i])) {
+            if(y[i] + dy[i] > canvas.height-r[i] || y[i] + dy[i] < r[i]) {
+                dy[i] = -dy[i]; 
+                dy[i] *= 0.90;
+                dx[i] *= 0.90;
+            }
+            x[i] += dx[i];
+            y[i] += dy[i];
+            dy[i] += gravity;
         }
-        x[i] += dx[i];
-        y[i] += dy[i];
-        dy[i] += gravity;
+    }
+
+}
+
+canvas.onclick = function() {
+    for(i=0; i<ballCount; i++){
+        dy[i] -= 10;
+        dx[i] = Math.random() * 10;
     }
 }
