@@ -1,30 +1,35 @@
-x,y=300;
-dx,dy=5;
-myGame.fps=60;
+var x,y=300;
+var dx,dy=5;
 let request = new XMLHttpRequest();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext('2d');
+var ballRadius = 10;
 
 request.onload = function(){
-    context= moveByCanvas.getContext('2d');
-    setInterval(draw,50);
+    setInterval(draw, 10);
+    alert('test2');
+}
+
+function drawBall() {
+    ctx.beginPath();
+    ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+    ctx.fillStyle = "#0095DD";
+    ctx.fill();
+    ctx.closePath();
 }
 
 function draw() {
+    alert('test');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawBall();
     
-    context.clearRect(0,0, 400,400);
-    context.beginPath();
-    context.fillStyle='black';
-    context.arc(x,y,20,0,Math.PI*2,true);
-    context.closePath();
-    context.fill();
-
-    if( x<20 || x>380) dx=-dx;
-    if( y<20 || y>380) dy=-dy;
-    x+=dx;
-    y+=dy;}
-
-    myCanvas.onclick = function() {
-    var d1 = Math.random() < 0.5 ? -1 : 1;
-    var d2 = Math.random() < 0.5 ? -1 : 1;
-    dx *= d1;
-    dy *= d2;
+    if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+        dx = -dx;
+    }
+    if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
+        dy = -dy;
+    }
+    
+    x += dx;
+    y += dy;
 }
