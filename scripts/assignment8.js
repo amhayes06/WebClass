@@ -1,35 +1,48 @@
-var x,y=300;
-var dx,dy=5;
-let request = new XMLHttpRequest();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext('2d');
-var ballRadius = 10;
+var ctx = canvas.getContext("2d");
+var ballCount = 100;
+var x = [];
+var y = [];
+var dx = [];
+var dy = [];
+var r = [];
+var gravity = .1;
 
-request.onload = function(){
+window.onload = function(){
+    for( i=0; i< ballCount; i++){
+        x[i] = Math.random() * (canvas.width - 0);
+        y[i] = Math.random() * (canvas.height - (canvas.height/2) + (canvas.height/2));
+        dx[i] = Math.random() * 10;
+        dy[i] = Math.random() * 2;
+        r[i] = 10;
+    }
     setInterval(draw, 10);
-    alert('test2');
 }
 
 function drawBall() {
-    ctx.beginPath();
-    ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+    for(i=0; i<ballCount;i++){
+        ctx.beginPath();
+        ctx.arc(x[i], y[i], r[i], 0, Math.PI*2);
+        ctx.fillStyle = "#1040e0";
+        ctx.fill();
+        ctx.closePath();
+    }
 }
 
 function draw() {
-    alert('test');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall();
-    
-    if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-        dx = -dx;
+    for(i=0; i<ballCount; i++){
+        if(x[i] + dx[i] > canvas.width-r[i] || x[i] + dx[i] < r[i]) {
+            dx[i] = -dx[i];
+        }
+        if(y[i] + dy[i] > canvas.height-r[i] || y[i] + dy[i] < r[i]) {
+            dy[i] = -dy[i]; 
+            dy[i] *= 0.90;
+            dx[i] *= 0.90;
+        }
+        x[i] += dx[i];
+        y[i] += dy[i];
+        dy[i] += gravity;
     }
-    if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-        dy = -dy;
-    }
-    
-    x += dx;
-    y += dy;
 }
