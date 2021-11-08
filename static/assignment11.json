@@ -1,0 +1,233 @@
+{
+    "classes": [
+        {
+            "classId": "1",
+            "classCode": "ACG3101",
+            "className": "Intermediate Accounting I",
+            "description": "This course is the first of a three-course sequence on the theory and applications of the accounting process, standards, and regulations. The focus is on the evaluation of the accounting cycle and the asset accounts. Topics include financial statements, accounting information systems, time value of money, and current assets.",
+            "hours": "3",
+            "required": true,
+            "offered": [
+                    "Fall",
+                    "Spring"
+            ],
+            "prereqs": [
+                "ACG2071",
+                "MAC2233"
+            ]
+        },
+        {
+            "classId": "2",
+            "classCode": "ACG3113",
+            "className": "Intermediate Accounting II",
+            "description": "This course is the second of a three-course sequence on the theory and applications of the accounting process, standards, and regulations. The focus is on evaluations of the assets, liabilities, and equity accounts. Additional topics include long-term assets, intangible assets, depreciation, liabilities, and earnings per share.",
+            "hours": "3",
+            "required": true,
+            "offered": [
+                    "Fall",
+                    "Spring"
+            ],
+            "prereqs": [
+                "ACG3101"
+            ]
+        },
+        {
+            "classId": "3",
+            "classCode": "ACG3123",
+            "className": "Intermediate Accounting III",
+            "description": "This course is the third of a three-course sequence on the theory and applications of the accounting process, standards, and regulations. The focus is on evaluations of revenue and expense accounts along with issues on taxation and disclosure. Additional topics include investments, revenue recognition, income taxes, benefits, leases, cash flows, and error analysis.",
+            "hours": "3",
+            "required": true,
+            "offered": [
+                    "Fall",
+                    "Spring"
+            ],
+            "prereqs": [
+                "ACG3113"
+            ]
+        },
+        {
+            "classId": "4",
+            "classCode": "ACG3341",
+            "className": "Cost Accounting",
+            "description": "This course provides a study of the relationship of cost accounting to the control and decision-making functions of management. Emphasis is placed on the review of accounting for costs followed by a detailed consideration of product costing for both job order, process cost, and activity-based costing systems.",
+            "hours": "3",
+            "required": true,
+            "offered": [
+                "Fall",
+                "Spring"
+            ],
+            "prereqs": [
+                "ACG3113"
+            ]
+        },
+        {
+            "classId": "5",
+            "classCode": "ACG4401",
+            "className": "Accounting Information Systems",
+            "description": "This course provides a foundation in accounting information systems for a business organization. Topics covered include business processes, financial risks, internal controls, and the design and implementation of an Accounting Information System (AIS)",
+            "hours": "3",
+            "required": true,
+            "offered": [
+                "Fall",
+                "Spring"
+            ],
+            "prereqs": [
+                "ACG2071"
+            ]
+        },
+        {
+            "classId": "6",
+            "classCode": "ACG4501",
+            "className": "Governmental and Nonprofit Accounting",
+            "description": "This course is an examination of budgeting, accounting, reporting standards and practices for governmental and nonprofit entities.",
+            "hours": "3",
+            "required": true,
+            "offered": [
+                    "Spring"
+            ],
+            "prereqs": [
+                "ACG3123"
+            ]
+        },
+        {
+            "classId": "7",
+            "classCode": "ACG4632",
+            "className": "Auditing",
+            "description": "This course is an introduction to the basic concepts, principles and environment of financial statement auditing. The course will emphasize the audit decision-making process, researching audit standards, audit planning, evidence evaluation, audit reports, ethics, and legal liability.",
+            "hours": "3",
+            "required": true,
+            "offered": [
+                    "Summer"
+            ],
+            "prereqs": [
+                "ACG3123"
+            ]
+        },
+        {
+            "classId": "8",
+            "classCode": "BUL3130",
+            "className": "Legal, Ethical, and Social Aspects of Business",
+            "description": "This course explores the nature of legal, ethical, and societal environments of business. Emphasis is placed on business's social, legal, political, and ethical responsibilities to both external and internal groups in business. Topics include corporate social responsibility, legal, political and ethical aspects of business, state and federal laws, contracts, intellectual property, employment law, product liability, safety issues, and environmental regulation. Students must be at Junior level status when registering for this course.",
+            "hours": "3",
+            "required": true,
+            "offered": [
+                    "Fall",
+                    "Spring",
+                    "Summer"
+            ],
+            "prereqs": [
+                "GEB3213"
+            ]
+        },
+        {
+            "classId": "9",
+            "classCode": "FIN3403",
+            "className": "Business Finance",
+            "description": "This course is an introduction to financial analysis and decision-making from a managerial perspective. Topics include financial statement analysis, financial planning and forecasting, time value of money with analysis and computation tools, risk and rates of return, asset valuation, and capital budgeting.",
+            "hours": "3",
+            "required": true,
+            "offered": [
+                    "Fall",
+                    "Spring"
+            ],
+            "prereqs": [
+                "ACG2071",
+                "ECO2013",
+                "ECO2023"
+            ]
+        },
+        {
+            "classId": "10",
+            "classCode": "GEB3213",
+            "className": "Business Writing",
+            "description": "This course emphasizes the basics of business writing while reviewing the various kinds of written business correspondence. Students are expected to integrate business decision making and analytical thinking skills into the content. Students must be able to determine solutions to problem-based exercises. PR: ENC 1101 or equivalent; junior level status or permission of the chair is required. (This course number was formerly GEB 3212).",
+            "hours": "3",
+            "required": true,
+            "offered": [
+                "Fall",
+                "Spring",
+                "Summer"
+            ],
+            "prereqs": [
+                "ENC1101"
+            ]
+        },
+        {
+            "classId": "11",
+            "classCode": "MAN3353",
+            "className": "Management Theory and Practices",
+            "description": "This course examines management theory, relevant applications and cases, self-management, teamwork, global awareness, and communication for the development of management competencies. Students must be at Junior level status when registering for this course.",
+            "hours": "3",
+            "required": true,
+            "offered": [
+                    "Fall",
+                    "Spring",
+                    "Summer"
+            ],
+            "prereqs": [
+                "GEB3213"
+            ]
+        },
+        {
+            "classId": "12",
+            "classCode": "MAN4504",
+            "className": "Operational Decision Making",
+            "description": "This course focuses on operational decision-making management techniques to improve the processes and productivity in organizations. Discussion of quality and outcomes, efficiency, forecasting, work-flow processes, inventory control, design of goods and services, waiting lines and critical path. Managing a project from beginning to end, including how to identify needs, and define, assign and track items, is addressed. PR: Senior level status or permission of the chair is required.",
+            "hours": "3",
+            "required": true,
+            "offered": [
+                    "Fall",
+                    "Spring",
+                    "Summer"
+            ],
+            "prereqs": [
+                "GEB3213"
+            ]
+        },
+        {
+            "classId": "13",
+            "classCode": "TAX3001",
+            "className": "Federal Income Tax",
+            "description": "This course is an introduction to federal income taxation focused on providing a basic understanding of the federal income tax laws as they relate to individuals and businesses.",
+            "hours": "3",
+            "required": true,
+            "offered": [
+                    "Spring"
+            ],
+            "prereqs": [
+                "ACG2071"
+            ]
+        },
+        {
+            "classId": "14",
+            "classCode": "TAX3011",
+            "className": "Taxation of Business Organizations",
+            "description": "This course covers concepts and methods of determining income for corporations, partnerships, estates and trusts for tax purposes, including interpretation of the internal revenue code, related regulations, and tax advisory services.",
+            "hours": "3",
+            "required": true,
+            "offered": [
+                    "Spring"
+            ],
+            "prereqs": [
+                "TAX3001"
+            ]
+        },
+        {
+            "classId": "15",
+            "classCode": "MAN3353",
+            "className": "Management Theory and Practices",
+            "description": "This course examines management theory, relevant applications and cases, self-management, teamwork, global awareness, and communication for the development of management competencies. Students must be at Junior level status when registering for this course.",
+            "hours": "3",
+            "required": true,
+            "offered": [
+                    "Fall",
+                    "Spring",
+                    "Summer"
+            ],
+            "prereqs": [
+                "GEB3213"
+            ]
+        }
+    ]
+}
