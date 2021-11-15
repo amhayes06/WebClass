@@ -12,10 +12,10 @@ function populateTable(jsonObj) {
     for (let x in jsonObj) {
         text += "<tr><td>" + jsonObj[x].site + "</td>"
         text += "<td><img src=\"" + jsonObj[x].image + "\"></td>"
-        text += "<td>" + jsonObj[x].produced + "</td></tr>"
-        text += "<td>" + jsonObj[x].tech + "</td></tr>"
-        text += "<td>" + jsonObj[x].pros + "</td></tr>"
-        text += "<td>" + jsonObj[x].cons + "</td></tr>"
+        text += "<td>" + jsonObj[x].produced + "</td>"
+        text += "<td>" + jsonObj[x].tech + "</td>"
+        text += "<td>" + jsonObj[x].pros + "</td>"
+        text += "<td>" + jsonObj[x].cons + "</td>"
         text += "<td>" + jsonObj[x].details + "</td></tr>"
     }
     text += "</table>"
