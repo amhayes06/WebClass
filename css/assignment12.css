@@ -5,6 +5,7 @@ table {
   }
   
   td {
+    background-color: #1d726f;
     border: 1px solid #1d726f;
     text-align: left;
     padding: 8px;
@@ -17,7 +18,7 @@ table {
   }
   
   tr:nth-child(even) {
-    background-color: #8dfce4;
+    background-color: #b6f1e5;
     border: 1px solid #000000;
   }
 
