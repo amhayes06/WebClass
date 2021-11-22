@@ -6,9 +6,10 @@ table {
   
   th {
     background-color: #1d726f;
-    border: 1px solid #1d726f;
+    border: 1px solid #000000;
     text-align: left;
     padding: 8px;
+    color: #ffffff
   }
 
   td {
