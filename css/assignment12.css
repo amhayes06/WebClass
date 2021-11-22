@@ -12,6 +12,7 @@ table {
   
   tr:nth-child(even) {
     background-color: #dddddd;
+    border: #000000;
   }
 
   img {
