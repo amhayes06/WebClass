@@ -4,7 +4,13 @@ table {
     width: 80%;
   }
   
-  td, th {
+  td {
+    border: 1px solid #1d726f;
+    text-align: left;
+    padding: 8px;
+  }
+
+  td {
     border: 1px solid #1d726f;
     text-align: left;
     padding: 8px;
