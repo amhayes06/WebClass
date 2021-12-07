@@ -131,9 +131,6 @@ function draw() {
   drawBricks();
   drawBall();
   drawPaddle();
-  drawScore();
-  drawLives();
-  collisionDetection();
   
   for (b=0; b<ballCount; b++) {
     if (rightPressed && paddleX < canvas.width - paddleWidth) {  
