@@ -59,8 +59,8 @@ function keyUpHandler(e) {
 function drawBricks() {
   for (c = 0; c < brickColumnCount; c++) {
     for (r = 0; r < brickRowCount; r++) {
+      bricky -= (dy*0.005);
       if (bricks[c][r].status === 1) {
-        bricky -= (dy*0.005);
         var brickX = (c * (brickWidth + brickPadding)) + brickOffsetLeft;
         var brickY = canvas.height - (r * (brickHeight + brickPadding)) - brickOffsetBottom + bricky;
         bricks[c][r].x = brickX;
